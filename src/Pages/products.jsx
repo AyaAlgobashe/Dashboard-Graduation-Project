@@ -28,7 +28,7 @@ const Products = () => {
 
   return (
     <>
-      <Box mt={25} sx={{ direction: "rtl", width: "60%", marginLeft: "10%" }}>
+      <Box mt={15} sx={{ direction: "rtl", width: "60%", marginLeft: "10%" }}>
         <Container>
 
           <Box mt={2} sx={{ backgroundColor: "rgba(4, 28, 55, 0.5)", display: "flex", color: "rgba(255, 255, 255, 1)", width: { xs: "16%", md: "9%" }, padding: "3px", height: "23px" }}>

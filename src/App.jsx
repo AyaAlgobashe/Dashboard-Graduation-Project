@@ -1,14 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 import TemporaryDrawer from './Components/SideBare';
-import Products from './Pages/products';
 import { BrowserRouter } from 'react-router-dom';
 import RouterPages from './Router/Router';
+import ProgressCircle from './Components/progress';
+import ProggresData from './Components/MainProgres';
 
 function App() {
   return (
     <>
     <BrowserRouter>
+    <ProggresData/>
     <TemporaryDrawer/>
     <RouterPages/>
       
