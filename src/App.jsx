@@ -1,14 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
-import Sidebar from './Components/SideBare';
 import TemporaryDrawer from './Components/SideBare';
-import Vendor from './Pages/Vendor';
+import Products from './Pages/products';
+import { BrowserRouter } from 'react-router-dom';
+import RouterPages from './Router/Router';
 
 function App() {
   return (
     <>
+    <BrowserRouter>
     <TemporaryDrawer/>
-    <Vendor/>
+    <RouterPages/>
+      
+    </BrowserRouter>
    
     </>
    

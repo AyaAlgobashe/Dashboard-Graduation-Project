@@ -15,21 +15,26 @@ import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import InventoryIcon from '@mui/icons-material/Inventory';
 import DesignServicesIcon from '@mui/icons-material/DesignServices';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { Link } from 'react-router-dom';
 
 export default function TemporaryDrawer() {
    const pages=[{
     name:"البائعين",
 
-    icon:<PeopleAltIcon sx={{color:"white"}}/>
+    icon:<PeopleAltIcon sx={{color:"white"}}/>,
+    link:"Vendors"
    },
    {name:"المنتجات",
-   icon:<InventoryIcon sx={{color:"white"}}/>
+   icon:<InventoryIcon sx={{color:"white"}}/>,
+   link:"products"
 }, 
    {name:"الخدمات",
-   icon:<DesignServicesIcon/>
+   icon:<DesignServicesIcon sx={{color:"white"}}/>,
+   link:"services"
 }, 
    {name:"الأماكن",
-   icon:<LocationOnIcon/>
+   icon:<LocationOnIcon sx={{color:"white"}}/>,
+   link:"locations"
 }
 ]
     return (
@@ -37,13 +42,14 @@ export default function TemporaryDrawer() {
             width: 300,
             backgroundColor: 'rgba(9, 18, 66, 1)',
             color: 'rgba(255, 255, 255, 1)',
-            height: '100vh',
+            height: '100%',
             position: 'fixed',
             right: 0,
             top: 0,
             zIndex: 1,
             direction: "rtl",
-            fontFamily: "Rubik"
+            fontFamily: "Rubik",
+            position:"absolute"
         }} role="presentation" >
             <Typography sx={{ textAlign: "center", fontFamily: "Rubik" }} variant='h4' mt={3} mb={3}>Admin Panel</Typography>
             <Divider sx={{ backgroundColor: "white" }} />
@@ -53,7 +59,10 @@ export default function TemporaryDrawer() {
                         <ListItemIcon>
                             {text.icon }
                         </ListItemIcon>
+                        <Link to={`/${text.link}`} style={{textDecoration:"none",color:"white"}}>
                         <Typography sx={{ textAlign: "center", fontFamily: "Rubik" }} variant='h6' mt={3} mb={3}>{text.name}</Typography>
+
+                        </Link>
                     </ListItemButton>
                 ))}
             </List>
